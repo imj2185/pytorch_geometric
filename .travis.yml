@@ -18,7 +18,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda create --yes -n test python="${PYTHON_VERSION}"
-  - source activate test
+  - conda activate test
   - conda install pytorch==${TORCH_VERSION} torchvision==${TORCHVISION_VERSION} ${TOOLKIT} -c pytorch -c conda-forge --yes
   - pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-${TORCH_VERSION}+${IDX}.html
   - pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-${TORCH_VERSION}+${IDX}.html
